@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/view-advert-type-answer" method="post">
+      {{ govukRadios({
+        idPrefix: "view-advert-type-answer",
+        name: "view-advert-type-answer",
+        fieldset: {
+          legend: {
+            text: "What adverts whould you like to view?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "view-rentals",
+            text: "Rentals"
+          },
+          {
+            value: "view-for-sale",
+            text: "For sale"
+          },
+          {
+            value: "view-dating",
+            text: "Dating"
+          }
+        ]
+      }) }}
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
