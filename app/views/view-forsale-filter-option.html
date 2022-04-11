@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Advert display by X filter
+      </h1>
+
+      <p>Adverts displayed here, click on advert to see in more detail</p>
+
+      <form action="/view-forsale-confirmation" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true" />
+  
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

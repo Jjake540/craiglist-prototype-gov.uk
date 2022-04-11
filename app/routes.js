@@ -42,7 +42,7 @@ router.post('/view-advert-type-answer', function (req, res) {
   if (viewAdvertTypeAnswer == "view-rentals"){
     res.redirect('/view-rentals')
   } else if (viewAdvertTypeAnswer == "view-for-sale"){
-    res.redirect('/view-for-sale')
+    res.redirect('/view-forsale')
   } else {
     res.redirect('/view-dating')
   }
@@ -54,7 +54,7 @@ router.post('/post-advert-type-answer', function (req, res) {
   if (postAdvertTypeAnswer == "post-rentals"){
     res.redirect('/post-rentals-title')
   } else if (postAdvertTypeAnswer == "post-for-sale"){
-    res.redirect('/post-for-sale-title')
+    res.redirect('/post-forsale-title')
   } else {
     res.redirect('/post-dating-title')
   }
@@ -74,6 +74,25 @@ router.post('/view-rentals-by-filter-answer', function (req, res) {
   }
 })
 
+router.post('/view-forsale-by-filter-answer', function (req, res) {
+  var viewForSaleByFilterType = req.session.data['view-forsale-by-filter-answer']
+
+  if (viewForSaleByFilterType == "view-all-forsale"){
+    res.redirect('/view-forsale-filter-option')
+  } else {
+    res.redirect('/view-forsale-filter-option')
+  }
+})
+
+router.post('/view-dating-by-filter-answer', function (req, res) {
+  var viewDatingByFilterType = req.session.data['view-dating-by-filter-answer']
+
+  if (viewDatingByFilterType == "view-all-forsale"){
+    res.redirect('/view-dating-filter-option')
+  } else {
+    res.redirect('/view-dating-filter-option')
+  }
+})
 
 
 module.exports = router
