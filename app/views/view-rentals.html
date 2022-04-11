@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/view-rentals-by-filter-answer" method="post">
+      {{ govukRadios({
+        idPrefix: "view-rentals-by-filter-answer",
+        name: "view-rentals-by-filter-answer",
+        fieldset: {
+          legend: {
+            text: "How would you like to view the rentals?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "view-all-rentals",
+            text: "View all rentals"
+          },
+          {
+            value: "view-by-price",
+            text: "View by price"
+          },
+          {
+            value: "view-by-number-of-bedrooms",
+            text: "View by number of bedrooms"
+          },
+          {
+            value: "view-by-number-of-bathrooms",
+            text: "View by number of bathrooms"
+          }
+        ]
+      }) }}
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
