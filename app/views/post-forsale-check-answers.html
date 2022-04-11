@@ -14,7 +14,7 @@
 
       <h1 class="govuk-heading-xl">Check your answers before posting your ad</h1>
 
-      <h2 class="govuk-heading-m">Property for rental</h2>
+      <h2 class="govuk-heading-m">Item for sale</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -36,10 +36,10 @@
             Title
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['rental-name']}}
+            {{ data['forsale-name']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/post-rentals-title">
+            <a href="/post-forsale-title">
               Change
               <span class="govuk-visually-hidden"> title</span>
             </a>
@@ -50,10 +50,10 @@
             Description
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['rental-description']}}
+            {{ data['forsale-description']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/post-rentals-description">
+            <a href="/post-forsale-description">
               Change
               <span class="govuk-visually-hidden"> description</span>
             </a>
@@ -61,57 +61,15 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date available
+            Price
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['date-available']}}
+            {{ data['forsale-price']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="post-rentals-date-avialible.html">
+            <a href="post-forsale-price.html">
               Change
-              <span class="govuk-visually-hidden"> date available</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Number of bedrooms
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['bedrooms-total']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="post-rentals-bedrooms.html">
-              Change
-              <span class="govuk-visually-hidden"> number of bedrooms</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Number of bathrooms
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['bathrooms-total']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="post-rentals-bathrooms.html">
-              Change
-              <span class="govuk-visually-hidden"> number of bathrooms</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Rent per month
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['rental-price']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="post-rentals-price.html">
-              Change
-              <span class="govuk-visually-hidden"> rent per month</span>
+              <span class="govuk-visually-hidden"> price</span>
             </a>
           </dd>
         </div>
@@ -121,7 +79,7 @@
 
       <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="/post-rentals-confirmation" method="post" novalidate>
+      <form action="/post-forsale-confirmation" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

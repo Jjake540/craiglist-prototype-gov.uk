@@ -24,18 +24,6 @@ router.post('/view-advert-region-answer', function (req, res) {
   }
 })
 
-router.post('/post-advert-region-answer', function (req, res) {
-  var postAdvertRegionAnswer = req.session.data['post-advert-region-answer']
-
-  if (postAdvertRegionAnswer == "post-london"){
-    res.redirect('/post-advert-types')
-  } else if (postAdvertRegionAnswer == "post-manchester"){
-    res.redirect('/post-manchester')
-  } else {
-    res.redirect('/post-aberdeen')
-  }
-})
-
 router.post('/view-advert-type-answer', function (req, res) {
   var viewAdvertTypeAnswer = req.session.data['view-advert-type-answer']
 
@@ -45,18 +33,6 @@ router.post('/view-advert-type-answer', function (req, res) {
     res.redirect('/view-forsale')
   } else {
     res.redirect('/view-dating')
-  }
-})
-
-router.post('/post-advert-type-answer', function (req, res) {
-  var postAdvertTypeAnswer = req.session.data['post-advert-type-answer']
-
-  if (postAdvertTypeAnswer == "post-rentals"){
-    res.redirect('/post-rentals-title')
-  } else if (postAdvertTypeAnswer == "post-for-sale"){
-    res.redirect('/post-forsale-title')
-  } else {
-    res.redirect('/post-dating-title')
   }
 })
 
@@ -91,6 +67,30 @@ router.post('/view-dating-by-filter-answer', function (req, res) {
     res.redirect('/view-dating-filter-option')
   } else {
     res.redirect('/view-dating-filter-option')
+  }
+})
+
+router.post('/post-advert-type-answer', function (req, res) {
+  var postAdvertTypeAnswer = req.session.data['post-advert-type-answer']
+
+  if (postAdvertTypeAnswer == "post-rentals"){
+    res.redirect('/post-rentals-title')
+  } else if (postAdvertTypeAnswer == "post-for-sale"){
+    res.redirect('/post-forsale-title')
+  } else {
+    res.redirect('/post-dating-title')
+  }
+})
+
+router.post('/post-advert-region-answer', function (req, res) {
+  var postAdvertRegionAnswer = req.session.data['post-advert-region-answer']
+
+  if (postAdvertRegionAnswer == "post-london"){
+    res.redirect('/post-advert-types')
+  } else if (postAdvertRegionAnswer == "post-manchester"){
+    res.redirect('/post-advert-types')
+  } else {
+    res.redirect('/post-advert-types')
   }
 })
 

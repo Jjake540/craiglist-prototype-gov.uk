@@ -12,23 +12,20 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/post-rentals-check-answers" method="post">
+      <form class="form" action="/post-dating-check-answers" method="post">
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
-          id: "rental-price",
-          name: "rental-price",
+          id: "dating-age",
+          name: "dating-age",
           label: {
-            text: "What is the rent per month",
+            text: "What is your age",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           prefix: {
-            text: "£"
-          },
-          suffix: {
-            text: "per month"
+            text: "Enter age here"
           },
           classes: "govuk-input--width-5",
           spellcheck: false
