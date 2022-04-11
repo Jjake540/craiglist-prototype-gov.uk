@@ -14,11 +14,18 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Advert display
+        Advert display by X filter
       </h1>
 
-      <p>Advert display filter</p>
+      <p>Adverts displayed here, click on advert to see in more detail</p>
 
+      <form action="/view-rentals-confirmation" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true" />
+  
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+      </form>
 
 
     </div>

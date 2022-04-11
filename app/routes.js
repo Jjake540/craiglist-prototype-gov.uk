@@ -64,13 +64,13 @@ router.post('/view-rentals-by-filter-answer', function (req, res) {
   var viewRentalsByFilterType = req.session.data['view-rentals-by-filter-answer']
 
   if (viewRentalsByFilterType == "view-all-rentals"){
-    res.redirect('/view-rentals-filter-all')
+    res.redirect('/view-rentals-filter-option')
   } else if (viewRentalsByFilterType == "view-by-price"){
-    res.redirect('/view-rentals-filter-price')
+    res.redirect('/view-rentals-filter-option')
   } else if (viewRentalsByFilterType == "view-by-number-of-bedrooms"){
-    res.redirect('/view-rentals-filter-bedrooms')
+    res.redirect('/view-rentals-filter-option')
   } else {
-    res.redirect('/view-rentals-filter-bathrooms')
+    res.redirect('/view-rentals-filter-option')
   }
 })
 
