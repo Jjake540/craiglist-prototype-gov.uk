@@ -16,11 +16,11 @@ router.post('/view-advert-region-answer', function (req, res) {
   var viewAdvertRegionAnswer = req.session.data['view-advert-region-answer']
 
   if (viewAdvertRegionAnswer == "view-london"){
-    res.redirect('/view-london')
+    res.redirect('/view-advert-types')
   } else if (viewAdvertRegionAnswer == "view-manchester"){
-    res.redirect('/view-manchester')
+    res.redirect('/view-advert-types')
   } else {
-    res.redirect('/view-aberdeen')
+    res.redirect('/view-advert-types')
   }
 })
 
@@ -28,7 +28,7 @@ router.post('/post-advert-region-answer', function (req, res) {
   var postAdvertRegionAnswer = req.session.data['post-advert-region-answer']
 
   if (postAdvertRegionAnswer == "post-london"){
-    res.redirect('/post-london')
+    res.redirect('/post-advert-types')
   } else if (postAdvertRegionAnswer == "post-manchester"){
     res.redirect('/post-manchester')
   } else {
@@ -52,11 +52,11 @@ router.post('/post-advert-type-answer', function (req, res) {
   var postAdvertTypeAnswer = req.session.data['post-advert-type-answer']
 
   if (postAdvertTypeAnswer == "post-rentals"){
-    res.redirect('/post-rentals')
+    res.redirect('/post-rentals-title')
   } else if (postAdvertTypeAnswer == "post-for-sale"){
-    res.redirect('/post-for-sale')
+    res.redirect('/post-for-sale-title')
   } else {
-    res.redirect('/post-dating')
+    res.redirect('/post-dating-title')
   }
 })
 
